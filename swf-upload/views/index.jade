@@ -1,0 +1,23 @@
+!!!
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/js/swfupload/swfupload.js")
+    script(src="/js/swfupload/swfupload.queue.js")
+    script(src="/js/swfupload/fileprogress.js")
+    script(src="/js/handlers.js")
+    script(src="/js/script.js")
+  body
+
+    h2 <a href='http://swfupload.org/'>Swfupload</a> Demo
+
+    form#form1(action="index.php", method="post", enctype="multipart/form-data")
+
+      div#fsUploadProgress.fieldset.flash
+        span.legend Upload Queue
+
+      div#divStatus 0 Files Uploaded
+
+      span#spanButtonPlaceHolder
+      input#btnCancel(type="button", value="Cancel All Uploads", onclick="swfu.cancelQueue();", disabled="disabled", style="margin-left: 2px; font-size: 8pt; height: 29px;")
